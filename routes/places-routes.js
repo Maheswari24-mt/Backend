@@ -1,55 +1,21 @@
 
-// const express = require('express');
-// const { check } = require('express-validator');
 
-// const placesControllers = require('../controllers/places-controllers');
+// // starting of section 12//
 
-// const router = express.Router();
-
-// router.get('/:pid', placesControllers.getPlaceById);
-
-// router.get('/user/:uid', placesControllers.getPlacesByUserId);
-
-// router.post(
-//   '/',
-//   [
-//     check('title')
-//       .not()
-//       .isEmpty(),
-//     check('description').isLength({ min: 5 }),
-//     check('address')
-//       .not()
-//       .isEmpty()
-//   ],
-//   placesControllers.createPlace
-// );
-
-// router.patch(
-//   '/:pid',
-//   [
-//     check('title')
-//       .not()
-//       .isEmpty(),
-//     check('description').isLength({ min: 5 })
-//   ],
-//   placesControllers.updatePlace
-// );
-
-// router.delete('/:pid', placesControllers.deletePlace);
-
-// module.exports = router;
-//till section 11//
 // const express = require('express');
 // const { check } = require('express-validator');
 
 // const placesControllers = require('../controllers/places-controllers');
 // const fileUpload = require('../middleware/file-upload');
+// const checkAuth = require('../middleware/check-auth');
 
 // const router = express.Router();
 
 // router.get('/:pid', placesControllers.getPlaceById);
 
 // router.get('/user/:uid', placesControllers.getPlacesByUserId);
+
+// router.use(checkAuth);
 
 // router.post(
 //   '/',
@@ -80,8 +46,6 @@
 // router.delete('/:pid', placesControllers.deletePlace);
 
 // module.exports = router;
-
-// starting of section 12//
 
 const express = require('express');
 const { check } = require('express-validator');
